@@ -32,7 +32,7 @@ public class Member {
                 case 'm':
                 case 'F':
                 case 'f':
-                    return; // 메소드를 호추한 곳으로 결과값을 전달하
+                    return; // 메소드를 호출한 곳으로 결과값을 전달하고
                 default:
                     System.out.println(" 성별을 잘못 입력하셨습니다.");
 
