@@ -23,6 +23,7 @@ public class Member {
             if (age > 0 && age < 200) return;
             System.out.println("나이를 잘못 입력했습니다.");
         }
+    }
         public void setGender() {
             System.out.print("성별을 입력하세요 : ");
             gender = sc.next().charAt(0);
@@ -39,4 +40,3 @@ public class Member {
         }
     }
 
-}
