@@ -29,7 +29,7 @@ public class LottoEx1 {
 
 
     }
-        System.out.print(Arrays.toString(lottery));
+        System.out.println(Arrays.toString(lottery));
     }
 
 }
