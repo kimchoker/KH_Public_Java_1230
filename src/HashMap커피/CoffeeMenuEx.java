@@ -51,16 +51,16 @@ public class CoffeeMenuEx {
                     break;
                 case 3:
                     System.out.print("추가할 메뉴를 입력하세요 : ");
-                    key = sc.next();
+                    key = sc.nextLine();
                     if(map.containsKey(key)) {
                         System.out.print("이미 존재하는 메뉴입니다.");
                     } else {
                         System.out.print("가격 : ");
                         int price = sc.nextInt();
                         System.out.print("분류 : ");
-                        String group = sc.next();
+                        String group = sc.nextLine();
                         System.out.print("설명 : ");
-                        String desc = sc.next();
+                        String desc = sc.nextLine();
                         map.put(key, new MenuInfo(key, price, group, desc));
                     }
                     break;
