@@ -1,5 +1,6 @@
 package X보다작은수;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 // 첫째줄에 N과 X가 주어짐
@@ -11,17 +12,18 @@ import java.util.Scanner;
 public class LessXMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        ArrayList<Integer> list = new ArrayList<>();
         System.out.println("배열의 길이를 입력하세요");
-        int[] arr = new int[sc.nextInt()];
+        int leng = sc.nextInt();
         System.out.println("기준이 되는 숫자를 입력하세요");
         int find = sc.nextInt();
         System.out.println("배열의 숫자를 입력하세요");
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = sc.nextInt();
+        for (int i = 0; i < leng; i++) {
+            list.add(sc.nextInt());
         }
-        for (int i = 0; i < arr.length; i++) {
-            if(arr[i] < find) {
-                System.out.print(arr[i]+" ");
+        for (int i = 0; i < leng; i++) {
+            if(list.get(i) < find) {
+                System.out.print(list.get(i)+" ");
             }
         }
     }

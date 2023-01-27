@@ -8,28 +8,21 @@ package 중복없는로또번호생성;
 // 반복문을 순회하면서 랜덤함수를 이용해 배열에 로또번호를 추가
 // 마지막에 배열에 포함된 로또 번호 출력
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 //타입[] 배열이름 = new 타입[배열의 길이]
 public class LottoEx1 {
     public static void main(String[] args) {
-        int[] lottery = new int[6];
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Integer> lottery = new ArrayList<>();
         int tmp, index = 0;
-        boolean isExist = false; // 로또 배열에 지금 생성된 숫자와 같은 숫자가 존재하는가
-
-        while (true){
-             tmp = (int) ((Math.random() * 45) + 1);
-             for(int i = 0; i < lottery.length; i++) {
-                 if(lottery[i] == tmp) isExist = true;
-             }
-                if(isExist == false) lottery[index++] = tmp; // 해당 인덱스에 값을 반영하고 증가시킴
-
-                if (index == 6) break;
-                isExist = false;
-
-
+        for (int i = 0; i < 6; i++) {
+            tmp = (int) ((Math.random() * 45) + 1);
+            if (!lottery.contains(tmp)) lottery.add(tmp);
+            if (lottery.size() == 6) break;
+        }
+        System.out.println(lottery);
     }
-        System.out.println(Arrays.toString(lottery));
-    }
-
 }
