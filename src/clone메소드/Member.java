@@ -15,6 +15,11 @@ public class Member implements Cloneable {
         this.age = age;
         this.isAdult = isAdult;
     }
+
+    public Member() {
+
+    }
+
     // 반환 타입이 Member 타입임
     public Member getMember() {
         Member cloned = null;
@@ -22,5 +27,8 @@ public class Member implements Cloneable {
             cloned = (Member) clone();  // 클론 메소드의 반환 타입은 Object 이므로 형변환이 필요함
         } catch (CloneNotSupportedException e) {}
         return cloned;
+    }
+
+    public void getMemberProperity() {
     }
 }
