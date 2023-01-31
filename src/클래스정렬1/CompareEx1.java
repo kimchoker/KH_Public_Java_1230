@@ -10,7 +10,7 @@ public class CompareEx1 {
         ts.add(new CarEx("Genesis", 2023,"Black"));
         ts.add(new CarEx("Grandeur", 2022,"White"));
         ts.add(new CarEx("Sonata", 2017,"Grey"));
-        ts.add(new CarEx("Tussan", 2021,"Red"));
+        ts.add(new CarEx("Tussan", 2020,"Red"));
         ts.add(new CarEx("Kona", 2020,"Mint"));
 
         for(CarEx e : ts) {
