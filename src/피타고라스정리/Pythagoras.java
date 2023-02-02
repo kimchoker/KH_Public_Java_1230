@@ -7,6 +7,7 @@ public class Pythagoras {
         Scanner sc = new Scanner(System.in);
         List<Integer> tri = new ArrayList<>();
         System.out.println("삼각형의 세 변의 길이를 입력하세요");
+        List<String> rst = new ArrayList<>();
         while (true) {
             int input1 = sc.nextInt();
             int input2 = sc.nextInt();
@@ -20,11 +21,15 @@ public class Pythagoras {
             tri.sort(Comparator.naturalOrder());
 
             if (tri.get(0) * tri.get(0) + tri.get(1) * tri.get(1) == tri.get(2) * tri.get(2)) {
-                System.out.println("right");
+                rst.add("right");
             } else {
-                System.out.println("wrong");
+                rst.add("wrong");
             }
             tri.removeAll(tri);
         }
+        for (String e : rst) {
+            System.out.println(e);
+        }
+
     }
 }
