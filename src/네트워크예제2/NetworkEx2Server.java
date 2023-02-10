@@ -14,9 +14,9 @@ public class NetworkEx2Server {
             serverSocket.bind(new InetSocketAddress("localhost", 5001));
             while (true) {
                 System.out.println("[연결 기다림]");
-                Socket socket = serverSocket.accept();
+                Socket socket = serverSocket.accept(); // 클라이언트 연결 요청을 수락(연결 요청 있기 전까지 블로킹 상태 - while문이 돌지 않고 여기서 대기)
                 InetSocketAddress isa = (InetSocketAddress) socket.getRemoteSocketAddress();
-                System.out.println("[연결 요청을 수락함] " + isa.getHostName());
+                System.out.println("[연결 요청을 수락함] " + isa.getHostName()); // 클라이언트의 IP를 반환
             }
         } catch (Exception e) {}
         if (!serverSocket.isClosed()) {
